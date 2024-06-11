@@ -11,7 +11,7 @@ out/
 .settings
 .springBeans
 .sts4-cache
-.idea
+.idea/
 
 
 bin/
@@ -30,4 +30,4 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-.iml
+leetcode-enjoying.iml

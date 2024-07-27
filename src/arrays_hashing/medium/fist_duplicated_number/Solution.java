@@ -1,6 +1,10 @@
 package arrays_hashing.medium.fist_duplicated_number;
 
 
+import java.util.HashSet;
+import java.util.Set;
+
+
 // Question: return the first duplicated number
 // Given an array: [2,5,1,2,3,5,1,2,4]
 // It should return: 2
@@ -11,15 +15,16 @@ package arrays_hashing.medium.fist_duplicated_number;
 // Given an array = [2,3,4,5]
 // It should return: undefined
 
-import java.util.HashSet;
-import java.util.Set;
 
 public class Solution {
     public static void main(String[] args) {
 
         int[] numns = new int[]{2,5,1,2,3,5,1,2,4};
-        int result = firstDuplicatedNumberC2(numns);
-        System.out.println(result);  // 2
+        int result = firstDuplicatedNumberC1(numns);
+        int result2 = firstDuplicatedNumberC2(numns);
+
+        System.out.println(result);   // 2
+        System.out.println(result2);  // 2
 
     }
 
@@ -40,7 +45,7 @@ public class Solution {
     /* c2: using Set data structure
      *  here is why: the word 'first' makes me coming up with looping. But how do we loop ?
      *  The 'bottleneck' of this problem is to identify when a number existed in second time.
-     *  There are two states of an existing number: first presence & second presence
+     *  There are two states of an existing number: first presence & more presences
      *  By that way, I think the most appropriate data structure is SET,
      *  because SET isn't able to store 2 duplicated numbers
      */
